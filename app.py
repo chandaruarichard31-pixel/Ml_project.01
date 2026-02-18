@@ -5,7 +5,12 @@ import numpy as np
 # ----- Add Background Color
 st.markdown("""
 <style>
-[data-testid="stAppViewContainer"] { background-color: #B0C4DE; }
+.stApp {
+background-image:
+url("https://images.unsplash.com/photo-1544551763-7ef4200f4b8d");
+    background-size: cover;
+    background-attachement: fixed;
+ }
 </style>
 """, unsafe_allow_html=True)
 
@@ -25,7 +30,7 @@ try:
 except Exception as e:
     st.error(f"Model Load Error: {e}")
 
-st.title("TANZANIA FISH 🐟 PREDICTION")
+st.title(" 🐟 FISH CATCH PREDICTION SYSTEM")
 st.write("Fill your input to get prediction.")
 
 col1, col2 = st.columns(2)
@@ -70,6 +75,10 @@ if st.button("Predict Now"):
         
     except Exception as e:
         st.error(f"Prediction Error: {e}")
+
+
+
+    
 
 
 
